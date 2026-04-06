@@ -12,9 +12,13 @@ Perfect for scenarios where you need to replace SSDs, rebuild ZFS pools, or perf
 
 ## 🛠️ Usage
 
-Run the script on your Proxmox node shell:
+
    ```bash
+   # Run the script on your Proxmox node shell:
    bash -c "$(curl -fsSL https://raw.githubusercontent.com/gnolnos/batch_proxmox_lxc_storage_migrate/main/migrate_lxc.sh)"
-   
-⚠️ Disclaimer
+   ```
+⚠️ **Tip:** 
+It's good practice to inspect the script at the URL before executing it.
+
+⚠️ **Disclaimer:**
 Use at your own risk. Always make sure you have working backups (e.g., via Proxmox Backup Server) before performing bulk storage operations.
