@@ -12,21 +12,9 @@ Perfect for scenarios where you need to replace SSDs, rebuild ZFS pools, or perf
 
 ## 🛠️ Usage
 
-1. Download the script to your Proxmox node:
+Run the script on your Proxmox node shell:
    ```bash
-   wget https://raw.githubusercontent.com/gnolnos/batch_proxmox_lxc_storage_migrate/main/migrate_lxc.sh
+   bash -c "$(curl -fsSL https://raw.githubusercontent.com/gnolnos/batch_proxmox_lxc_storage_migrate/main/migrate_lxc.sh)"
    
-2. Make it executable:
-   ```bash
-   chmod +x migrate_lxc.sh
-
-3. Stop the containers you want to move:
-   ```bash
-   # Tip: Stop all running LXCs at once
-   for i in $(pct list | awk '/running/ {print $1}'); do pct stop $i; done
-
-4. Run the script:
-   ```bash
-   ./migrate_lxc.sh
 ⚠️ Disclaimer
 Use at your own risk. Always make sure you have working backups (e.g., via Proxmox Backup Server) before performing bulk storage operations.
